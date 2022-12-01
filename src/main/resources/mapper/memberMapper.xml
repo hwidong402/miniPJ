@@ -22,6 +22,10 @@
 		select * from apt_member
 	</select>
 	
+	<select id="login" parameterType="memberVO" resultType="memberVO">
+		select * from apt_member where id = #{id} and pw = #{pw}
+	</select>
+	
 	
 </mapper>
 

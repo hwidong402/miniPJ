@@ -2,6 +2,8 @@ package com.mars.mini;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,5 +37,18 @@ public class MemberController {
 		model.addAttribute("list", list);
 	}
 	
+	@RequestMapping("m_login")
+	public String login(MemberVO vo,HttpSession session) {
+		MemberVO vo2 = dao.login(vo);
+		
+		if (vo2 == null) {
+			return "no";
+		} else {
+			session.setAttribute("id", vo2.getId());
+			session.setAttribute("code", vo2.getCode());
+			session.setAttribute("name", vo2.getName());
+			return vo2.getCode()+"";
+		}
+	}
 	
 }

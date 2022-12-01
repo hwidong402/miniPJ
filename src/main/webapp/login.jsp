@@ -17,7 +17,7 @@
 		<span style="color: red; font-weight: bold;"> 아파트 커뮤니티</span>
 		<span>를 시작해보세요.</span>	
 	</div>
-	<form action="#">
+	<form action="m_login">
 		<table>
 			<tr>
 				<td><input type="text" id="id" name="id" placeholder="아이디" size="50"></td>
@@ -30,9 +30,7 @@
 			</tr>
 		</table>
 	</form>
-	<span class="btn btn-primary" style="width:250px;">
-	<a href="#"> 회원가입 </a>
-	</span>
+	<a href="enroll.jsp"><button class="btn btn-primary" style="width:250px;"> 회원가입 </button></a>
 </div>
 </body>
 </html>

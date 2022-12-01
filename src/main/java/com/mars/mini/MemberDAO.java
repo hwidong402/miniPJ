@@ -31,5 +31,9 @@ public class MemberDAO {
 	public void update(MemberVO vo) {
 		my.update("member.up", vo);
 	}
+	
+	public MemberVO login(MemberVO vo) {
+		return my.selectOne("member.login", vo); 
+	}
 
 }

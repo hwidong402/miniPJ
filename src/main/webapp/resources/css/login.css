@@ -14,7 +14,7 @@ body {
 
 #div {
 	text-align: center;
-	margin-top: 350px;
+	margin-top: 150px;
 	margin-left: 250px;
 }
 
@@ -38,7 +38,7 @@ a { text-decoration: none; }
 a:link {color: white;}
 a:visited {	color: white;}
 a:hover {color: white;}
-a:active {color: white;}
+a:active {color: white;} 
 
 
 
