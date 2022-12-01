@@ -44,8 +44,10 @@ legend {
 					<td><input type="text" name="sub_addr"></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="button"
-						style="width: 200pt; height: 20pt" value="가입하기"></td>
+					<td colspan="2">
+						<button type="submit" style="width: 200pt;height: 60pt">가입하기</button>
+						
+					</td>
 				</tr>
 			</table>
 		</fieldset>
