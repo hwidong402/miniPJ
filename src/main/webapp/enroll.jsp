@@ -19,7 +19,7 @@ legend {
 
 </head>
 <body>
-	<form action="create">
+	<form action="m_create">
 		<fieldset>
 			<legend>회원가입</legend>
 			<table>
