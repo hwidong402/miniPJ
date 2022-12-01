@@ -13,13 +13,13 @@ public class AptController {
 	AptDAO dao;	
 	
 	
-	@RequestMapping("all")
+	@RequestMapping("apt_all")
 	public void all(Model model) {
 		List<AptVO> list = dao.readAll();
 		System.out.println(list.size());
 		model.addAttribute("list", list);
 	}
-	@RequestMapping("one")
+	@RequestMapping("apt_one")
 	public void one(AptVO vo, Model model) {
 		AptVO one = dao.readOne(vo);
 		model.addAttribute("one", one);
