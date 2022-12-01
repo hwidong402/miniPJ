@@ -38,13 +38,13 @@
 <a href="login.jsp"><button>로그인</button></a>
 
 <div>
-<a href="all">
+<a href="apt_all">
 	<button>아파트 검색(실험용)</button>
 </a>
 </div>
 
 <h3>아파트검색</h3>
-<form action="one">
+<form action="apt_one">
 내가 살고 있는 아파트 검색 : <input type="text" name="addr"> <button type="submit">검색하기</button>
 </form>
 <!--나중에 ajax로 고칠 것-->
