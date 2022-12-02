@@ -6,7 +6,7 @@
 	</select>
 	
 	<select id="one" parameterType="aptVO" resultType="aptVO">
-		select * from apt where addr = #{addr}
+		select * from apt where name = #{name}
 	</select>
 </mapper>
 
