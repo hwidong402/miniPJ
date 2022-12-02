@@ -16,8 +16,19 @@ public class BbsController {
 	BbsDAO dao;
 	// 게시글 작성 완료버튼 클릭시 동작맵핑
 	@RequestMapping("create.bbs")
-	public String insert(BbsVO vo,Model model) {
+	public String insert(BbsVO vo,Model model,HttpSession session) {
+		vo.setCode((String)session.getAttribute("code"));
 		dao.insert(vo);
+		
+		List<BbsVO> list =dao.list(vo);
+		model.addAttribute("list", list);
+		return "bbs";
+	}
+	@RequestMapping("delete.bbs")
+	public String delete(BbsVO vo,Model model,HttpSession session) {
+		vo.setCode((String)session.getAttribute("code"));
+		dao.delete(vo);
+		
 		List<BbsVO> list =dao.list(vo);
 		model.addAttribute("list", list);
 		return "bbs";
@@ -27,21 +38,43 @@ public class BbsController {
 	public String back(BbsVO vo,Model model,HttpSession session) {
 		//뒤로가기 부를 때 vo에 코드 값넣어 검색 값 주기
 		vo.setCode((String)session.getAttribute("code"));
+		//code에 따른 게시판 내용 불러오기
 		List<BbsVO> list =dao.list(vo);
+		
 		model.addAttribute("list", list);
 		//게시판 홈으로 돌려보내기
 		return "bbs";
+	}
+	//수정 하기 전 뒤로 가기
+	@RequestMapping("back2.bbs")
+	public String back2(BbsVO vo,Model model) {
+		// bbs 테이블에서 id와 code로 게시판 내용 검색하기
+		BbsVO one =dao.one(vo);
+		model.addAttribute("dto", one);
+		// 게시판 상세보기 뷰 이름으로 연결
+		return "bbsinfo";
+	}
+	//수정하기 후 상세정보 보기
+	@RequestMapping("up.bbs")
+	public String up(BbsVO vo,Model model) {
+		// bbs 테이블에서 id와 code로 게시판 내용 검색하기
+		dao.update(vo);
+		BbsVO one =dao.one(vo);
+		model.addAttribute("dto", one);
+		// 게시판 상세보기 뷰 이름으로 연결
+		return "bbsinfo";
 	}
 	//게시판 실행 맵퍼
 	@RequestMapping("open.bbs")
 	public String open(BbsVO vo,Model model,HttpSession session) {
 		//BbsVO vo = new BbsVO();
+		//검색할 게시판 목록의 검색 코드 값을 세션값에서 가져오기 
 		vo.setCode((String)session.getAttribute("code"));
 		//String id = (String)session.getAttribute("id");
 		//String code = (String)session.getAttribute("code");
-		//실험용으로 게시판 넘어올 때 세션 값 적용해 놓기
-		
+		//코드를 통한 게시판 검색 목록 
 		List<BbsVO> list =dao.list(vo);
+		//코드를 통한 게시판 검색 목록 보내기
 		model.addAttribute("list", list);
 		// 게시판 jsp이름
 		return "bbs";
@@ -55,7 +88,7 @@ public class BbsController {
 		// 게시판 상세보기 뷰 이름으로 연결
 		return "bbsinfo";
 	}
-	//
+	//글 타이틀로 검색하기
 	@RequestMapping("search.bbs")
 	public String search(BbsVO vo,Model model,HttpSession session) {
 		//뒤로가기 부를 때 vo에 코드 값넣어 검색 값 주기
@@ -64,6 +97,23 @@ public class BbsController {
 		model.addAttribute("list", list);
 		//게시판 홈으로 돌려보내기
 		return "bbs";
+	}
+	// 게시글 작성 페이지 이동
+	@RequestMapping("jspwrite.bbs")
+	public void write(BbsVO vo,Model model,HttpSession session) {
+		//뒤로가기 부를 때 vo에 코드 값넣어 검색 값 주기
+		vo.setCode((String)session.getAttribute("code"));
+		BbsVO one =dao.one(vo);
+		model.addAttribute("dto", one);
+		
+	}
+	//게시글 내용 수정하기
+	@RequestMapping("bbsup.bbs")
+	public void bbsup(BbsVO vo,Model model) {
+		//vo의id로 나머지 vo 값 다들고오기
+		BbsVO one =dao.one(vo);
+		model.addAttribute("dto", one);
+		
 	}
 	
 }
