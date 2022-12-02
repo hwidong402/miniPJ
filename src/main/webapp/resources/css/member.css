@@ -25,4 +25,47 @@ h2 {
 	height: 100px;
 	margin: 0 auto;
 }
+/* 중복아이디 존재하지 않는경우 */
+.idck1 {
+	color: green;
+	display: none;
+}
+
+/* 중복아이디 존재하는 경우 */
+.idck2 {
+	color: red;
+	display: none;
+}
+
+.pwck {
+	color: red;
+	display: none;
+}
+.final_pwck_ck {
+	color: red;
+	display: none;
+}
+.pwck_input_re_1 {
+	color: red;
+	display: none;
+}
+.pwck_input_re_2 {
+	color: red;
+	display: none;
+}
+.must1 {
+	color: red;
+}
+.must2 {
+	color: red;
+}
+.must3 {
+	color: red;
+}
+.must4 {
+	color: red;
+}
+.must5 {
+	color: red;
+}
 
