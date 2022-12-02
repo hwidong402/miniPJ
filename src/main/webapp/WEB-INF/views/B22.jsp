@@ -41,7 +41,7 @@ li {
 <div>
 	<div id="header">
 		<img id="apt_img_logo" src= "resources/img/<%=session.getAttribute("code")%>_logo.jpg" alt="<%=session.getAttribute("code")%>" height="50">
-		<h2 id="apt_name"><%=session.getAttribute("name")%></h2>
+		<h2 id="apt_name"><%=session.getAttribute("apt_name")%></h2>
 	</div>
 	<div id="nav">
 		<!-- Links -->

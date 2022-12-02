@@ -26,6 +26,11 @@
 		select * from apt_member where id = #{id} and pw = #{pw}
 	</select>
 	
+	<select id="code2name" parameterType="memberVO" resultType="aptVO">
+        select a.name
+        from apt a, apt_member an
+        where a.code = an.code and an.id = #{id}
+    </select>
 	
 </mapper>
 
