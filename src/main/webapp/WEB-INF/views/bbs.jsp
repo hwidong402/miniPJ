@@ -9,7 +9,7 @@
 <body>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <h3>주민게시판</h3>
-<form action="serch.bbs">
+<form action="search.bbs">
 <input name= "title"><button>검색</button>
 </form>
  <a href="jspwrite.bbs"><button>글쓰기</button></a> 
