@@ -41,9 +41,6 @@ public class BbsController {
 		//String code = (String)session.getAttribute("code");
 		//실험용으로 게시판 넘어올 때 세션 값 적용해 놓기
 		
-		session.setAttribute("code", vo.getCode());
-		session.setAttribute("id", vo.getId());
-		
 		List<BbsVO> list =dao.list(vo);
 		model.addAttribute("list", list);
 		// 게시판 jsp이름

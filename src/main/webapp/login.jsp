@@ -30,7 +30,8 @@
 			</tr>
 		</table>
 	</form>
-	<a href="enroll.jsp"><button class="btn btn-primary" style="width:250px;"> 회원가입 </button></a>
+	<span>아컴이 처음이신가요? </span>
+	<a href="enroll.jsp"><button class="btn btn-primary" style="width:100px;"> 회원가입 </button></a>
 </div>
 </body>
 </html>
