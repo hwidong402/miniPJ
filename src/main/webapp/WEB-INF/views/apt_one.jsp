@@ -16,10 +16,10 @@
 	</tr>
 	<tr>
 		<td>name</td>
-		<td>${one.addr}</td> <!-- one.getId()  -->
+		<td>${one.name}</td> <!-- one.getName()  -->
 	</tr>
 	<tr>
-		<td>name</td>
+		<td>area</td>
 		<td>${one.area}</td> <!-- one.getId()  -->
 	</tr>
 	

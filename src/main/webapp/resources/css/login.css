@@ -41,7 +41,9 @@ a:hover {color: white;}
 a:active {color: white;} 
 
 
-
+#mem{
+	width: 500px;
+}
 
 
 

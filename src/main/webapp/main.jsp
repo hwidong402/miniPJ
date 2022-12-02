@@ -45,7 +45,7 @@
 
 <h3>아파트검색</h3>
 <form action="apt_one">
-내가 살고 있는 아파트 검색 : <input type="text" name="addr"> <button type="submit">검색하기</button>
+내가 살고 있는 아파트 검색 : <input type="text" name="name"> <button type="submit">검색하기</button>
 </form>
 <!--나중에 ajax로 고칠 것-->
 <hr>
