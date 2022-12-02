@@ -15,7 +15,7 @@
 <body
 	style="background-image: url('resources/img/park.png'); background-repeat: no-repeat; background-position: center; background-size: cover; height: 80vh">
 
-	<div id="div" style="position: fixed; top: 150px; left: 500px; font-size: large;">
+	<div id="div" style="position: fixed; top: 150px; left: 500px; font-size: large;" >
 		<span style="color: red;">A-Comm</span> <span>의 회원이 되신 것을 진심으로
 			축하드립니다.</span> <br> <br>
 		<div style="display: inline-block; float: left; " >
