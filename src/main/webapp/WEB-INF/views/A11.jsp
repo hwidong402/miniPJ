@@ -79,7 +79,7 @@ li {
 			<tr>
 				<td>
 					<a href="myinfo.jsp"><button class="btn btn-outline-primary" style="width: 200px; ">내 정보</button></a>
-					<a href="bbs.jsp"><button class="btn btn-outline-danger" style="width: 200px;">로그아웃</button></a>
+					<a href="m_logout"><button class="btn btn-outline-danger" style="width: 200px;">로그아웃</button></a>
 				</td>
 			</tr>
 		</table>
