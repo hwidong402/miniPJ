@@ -11,11 +11,11 @@ public class BbsDAO {
 
 	@Autowired
 	SqlSessionTemplate my;
-
+	//게시글 작성 기능
 	public void insert(BbsVO vo) {
 		my.insert("bbs.create", vo);
 	}
-
+	//게시글 삭제 기능
 	public void delete(BbsVO vo) {
 
 		my.delete("bbs.del", vo);
