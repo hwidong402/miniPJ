@@ -38,21 +38,20 @@ public class MemberController {
 	}
 
 	@RequestMapping("m_login")
-    public String login(MemberVO vo, HttpSession session) {
-        MemberVO vo2 = dao.login(vo);
-        AptVO vo3 = dao.code2name(vo);
-        
-        if (vo2 == null) {
-            return "no";
-        } else {
-            session.setAttribute("id", vo2.getId());
-            session.setAttribute("code", vo2.getCode());
-            session.setAttribute("name", vo2.getName());
-            session.setAttribute("apt_name", vo3.getName());
-            return vo2.getCode() + "";
-        }
-    }
-
+	  public String login(MemberVO vo, HttpSession session, Model model) {
+	    MemberVO vo2 = dao.login(vo);
+	    AptVO vo3 = dao.code2name(vo);
+	     
+	    if (vo2 == null) {
+	      return "no";
+	    } else {
+	      session.setAttribute("id", vo2.getId());
+	      session.setAttribute("code", vo2.getCode());
+	      model.addAttribute("apt_name", vo3);
+	      return "homepage";
+	    }
+	 }
+	
 	@RequestMapping("m_logout")
 	public String logout(HttpSession session) {
 		session.invalidate();

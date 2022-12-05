@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>${apt_name.name}에 오신것을 환영합니다!</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 <style type="text/css">
@@ -40,8 +40,8 @@ li {
 
 <div>
 	<div id="header">
-		<img id="apt_img_logo" src= "resources/img/<%=session.getAttribute("code")%>_logo.jpg" alt="<%=session.getAttribute("code")%>" height="50">
-		<h2 id="apt_name"><%=session.getAttribute("apt_name")%></h2>
+		<img id="apt_img_logo" src= "resources/img/${code}_logo.jpg" alt="${code}_logo" height="50">
+		<h2 id="apt_name">${apt_name.name}</h2>
 	</div>
 	<div id="nav">
 		<!-- Links -->
@@ -53,7 +53,7 @@ li {
 	        <a href="notification.jsp">공지사항</a>
 	      </li>
 	      <li class="nav-item">
-	        <a href="open.bbs">커뮤니티</a>
+	        <a href="bbs.jsp">커뮤니티</a>
 	      </li>
 	      <li class="nav-item">
 	        <a href="matjip.jsp">주변 맛집</a>
@@ -61,17 +61,17 @@ li {
 	   	 </ul>
 	</div>
 	<div id="content">
-		<img id="apt_img" src= "resources/img/<%=session.getAttribute("code")%>.jpg" alt="<%=session.getAttribute("code")%>" height="370" width="600">
+		<img id="apt_img" src= "resources/img/${code}.jpg" height="370" width="600">
 		<table id="my_box">
 			<tr>
 				<td colspan="2">
-					<img src= "resources/img/<%=session.getAttribute("name")%>.jpg" alt="<%=session.getAttribute("name")%>" height="250" >
+					<img src= "resources/img/${name}.jpg" alt="${name}" height="250" >
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2" >
 					<p style="font-size: 17px;">
-					반갑습니다.<%=session.getAttribute("name")%>님<br>
+					반갑습니다.${name}님<br>
 					내가 사는 곳이 중심이 되는 곳 A-Comm에 오신 걸 환영합니다.
 					</p>
 				</td>
