@@ -53,7 +53,7 @@ li {
 	        <a href="notification.jsp">공지사항</a>
 	      </li>
 	      <li class="nav-item">
-	        <a href="bbs.jsp">커뮤니티</a>
+	        <a href="open.bbs">커뮤니티</a>
 	      </li>
 	      <li class="nav-item">
 	        <a href="matjip.jsp">주변 맛집</a>
