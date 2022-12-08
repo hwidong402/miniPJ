@@ -40,8 +40,8 @@ li {
 
 <div>
 	<div id="header">
-		<img id="apt_img_logo" src= "resources/img/${code}_logo.jpg" alt="${code}_logo" height="50">
-		<h2 id="apt_name">${apt_name.name}</h2>
+		<img id="apt_img_logo" src= "resources/img/${member.code}_logo.jpg" alt="${member.code}_logo" height="50">
+		<h2 id="apt_name">${apt.name}</h2>
 	</div>
 	<div id="nav">
 		<!-- Links -->
@@ -61,17 +61,17 @@ li {
 	   	 </ul>
 	</div>
 	<div id="content">
-		<img id="apt_img" src= "resources/img/${code}.jpg" height="370" width="600">
+		<img id="apt_img" src= "resources/img/${member.code}.jpg" height="370" width="600">
 		<table id="my_box">
 			<tr>
 				<td colspan="2">
-					<img src= "resources/img/${name}.jpg" alt="${name}" height="250" >
+					<img src= "resources/img/${member.name}.jpg" alt="${member.name}" height="250" >
 				</td>
 			</tr>
 			<tr>
 				<td colspan="2" >
 					<p style="font-size: 17px;">
-					반갑습니다.${name}님<br>
+					반갑습니다.${member.name}님<br>
 					내가 사는 곳이 중심이 되는 곳 A-Comm에 오신 걸 환영합니다.
 					</p>
 				</td>

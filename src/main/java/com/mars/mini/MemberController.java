@@ -47,7 +47,8 @@ public class MemberController {
 	    } else {
 	      session.setAttribute("id", vo2.getId());
 	      session.setAttribute("code", vo2.getCode());
-	      model.addAttribute("apt_name", vo3);
+	      model.addAttribute("member", vo2);
+	      model.addAttribute("apt", vo3);
 	      return "homepage";
 	    }
 	 }
