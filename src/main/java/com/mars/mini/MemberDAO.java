@@ -39,5 +39,9 @@ public class MemberDAO {
 	public AptVO code2name(MemberVO vo) {
         return my.selectOne("member.code2name", vo); 
     }
+	
+	public MemberVO idck(MemberVO vo) {
+		return my.selectOne("member.idck", vo);
+	}
 
 }

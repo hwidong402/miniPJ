@@ -58,5 +58,15 @@ public class MemberController {
 		session.invalidate();
 		return "redirect:main.jsp";
 	}
+	
+	@RequestMapping("ckok")
+	public void idck(MemberVO vo, Model model) {
+		MemberVO vo2 = dao.idck(vo);
+		String result = "no";
+		if(vo2 != null) {
+			result = "yes";
+		}
+		model.addAttribute("result", result);
+	}
 
 }
