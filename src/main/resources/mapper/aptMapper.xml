@@ -4,9 +4,8 @@
 	<select id="all"  resultType="aptVO" >
 		select * from apt
 	</select>
-	
-	<select id="one" parameterType="aptVO" resultType="aptVO">
-		select * from apt where name = #{name}
+		<select id="one" parameterType="aptVO" resultType="aptVO">
+		select * from apt where name like CONCAT('%',#{name},'%')
 	</select>
 </mapper>
 
